@@ -13,7 +13,9 @@ all = ['initialise',
        'wait']
        
 from time import sleep as wait
+import RPi.GPIO as GPIO
 from SporosRobot.system import initialise, cleanup
-from fullspeed import left, right, forward, backward, stop
+
+# from fullspeed import left, right, forward, backward, stop
 
 
