@@ -20,10 +20,10 @@ def initialise():
     motorpins = [rightforward, rightback, leftforward, leftback]
     
     for pin in motorpins:
-    GPIO.setup(pin, GPIO.OUT)
-    GPIO.output(pin,0)
-    print('right:{},{} left:{},{}'.format(rightforward,
-                                          rightback, 
-                                          leftforward, 
-                                          leftback))
+        GPIO.setup(pin, GPIO.OUT)
+        GPIO.output(pin,0)
+        print('right:{},{} left:{},{}'.format(rightforward,
+                                              rightback, 
+                                              leftforward, 
+                                              leftback))
     return motorpins
