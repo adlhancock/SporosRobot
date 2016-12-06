@@ -1,10 +1,12 @@
 #!/usr/bin/python3
 
-# CamJam EduKit 3 - Robotics
-# Worksheet 3 - Motor Test Code
+"""
+testing pulse width modukation to get variable speed for sporos robot
+
+"""
 
 import RPi.GPIO as GPIO 
-import time.sleep as wait
+from time import sleep as wait
 
 #assign pins
 motor_pins = [7,8,9,10]
@@ -15,10 +17,13 @@ lbw_pin = 10
 
 frequency = 50
 
+
+pwm = {} # this is the global pwm object 
+
 def setup_GPIO():
     GPIO.setmode(GPIO.BCM)
     GPIO.setwarnings(False)
-    pwm = {}
+    # pwm = {}
     for pin in motor_pins:
         GPIO.setup(pin, GPIO.OUT)
         pwm[pin] = GPIO.PWM(pin, frequency)
@@ -27,17 +32,18 @@ def setup_GPIO():
 
 def set_speed(pin, duty):
         pwm[pin].ChangeDutyCycle(duty)
-'''
-def move(func):
-    def function_wrapper(t):
-        print('moving : {} {}'.format(t,func.__name__))
-        func(t)
-        stop()
-        #time.sleep(0.25)
-    return function_wrapper
-'''
 
-#@move
+def move(func):
+    def function_wrapper(speed,t):
+        assert 0<=speed<=100, 'speed must be between 0 and 100'
+        print('moving {} at {}% for {} seconds'.format(func.__name__,speed,t))
+        func(speed)
+        wait(t)
+        stop()
+    return function_wrapper
+
+
+@move
 def right(speed):
     '''rotate right'''
     set_speed(rfw_pin,speed)
@@ -45,7 +51,7 @@ def right(speed):
     set_speed(rbw_pin,0)
     set_speed(lbw_pin,speed)
 
-#@move
+@move
 def left(speed):
     '''rotate left'''
     set_speed(rfw_pin,0)
@@ -53,7 +59,7 @@ def left(speed):
     set_speed(rbw_pin,speed)
     set_speed(lbw_pin,0)
 
-#@move
+@move
 def forward(speed):
     ''' all forward '''
     set_speed(rfw_pin,speed)
@@ -61,7 +67,7 @@ def forward(speed):
     set_speed(rbw_pin,0)
     set_speed(lbw_pin,0)
 
-#@move
+@move
 def backward(speed):
     ''' all backward '''
     set_speed(rfw_pin,0)
@@ -79,13 +85,19 @@ def stop():
 
 if __name__ == '__main__':
     setup_GPIO()
-
-    forward(20)
-    wait(1)
-    stop()
-    
-    
-    
-    ''' tidy up '''
-    stop()
-    GPIO.cleanup()
+    speed = int(input("speed: "))
+    direction = {'f':forward,
+                 'b':backward,
+                 'l':left,
+                 'r':right}
+    cmd = 'go'
+    while cmd is not '':
+        cmd = input('direction time: ')
+        try: 
+            d, t = cmd.split(' ')
+            direction[d](speed, float(t))
+        except:
+            print('exiting')
+            ''' tidy up '''
+            stop()
+            GPIO.cleanup()
