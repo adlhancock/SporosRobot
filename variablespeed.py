@@ -92,10 +92,13 @@ if __name__ == '__main__':
                  'r':right}
     cmd = 'go'
     while cmd is not '':
-        cmd = input('direction time: ')
+        cmd = input('direction+time: ')
         try: 
-            d, t = cmd.split(' ')
-            direction[d](speed, float(t))
+            cmd = cmd.split(' ')
+            for i in cmd:
+                d = i[0]
+                t = float(i[1:])
+                direction[d](speed, t)
         except:
             print('exiting')
             ''' tidy up '''
