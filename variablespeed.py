@@ -10,10 +10,10 @@ from time import sleep as wait
 
 #assign pins
 motor_pins = [7,8,9,10]
-rfw_pin = 7
-rbw_pin = 8
-lfw_pin = 9
-lbw_pin = 10
+lfw_pin = 7
+lbw_pin = 8
+rfw_pin = 9
+rbw_pin = 10
 
 frequency = 50
 
