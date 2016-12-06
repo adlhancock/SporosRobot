@@ -1,0 +1,91 @@
+#!/usr/bin/python3
+
+# CamJam EduKit 3 - Robotics
+# Worksheet 3 - Motor Test Code
+
+import RPi.GPIO as GPIO 
+import time.sleep as wait
+
+#assign pins
+motor_pins = [7,8,9,10]
+rfw_pin = 7
+rbw_pin = 8
+lfw_pin = 9
+lbw_pin = 10
+
+frequency = 50
+
+def setup_GPIO():
+    GPIO.setmode(GPIO.BCM)
+    GPIO.setwarnings(False)
+    pwm = {}
+    for pin in motor_pins:
+        GPIO.setup(pin, GPIO.OUT)
+        pwm[pin] = GPIO.PWM(pin, frequency)
+        pwm[pin].start(0)
+
+
+def set_speed(pin, duty):
+        pwm[pin].ChangeDutyCycle(duty)
+'''
+def move(func):
+    def function_wrapper(t):
+        print('moving : {} {}'.format(t,func.__name__))
+        func(t)
+        stop()
+        #time.sleep(0.25)
+    return function_wrapper
+'''
+
+#@move
+def right(speed):
+    '''rotate right'''
+    set_speed(rfw_pin,speed)
+    set_speed(lfw_pin,0)
+    set_speed(rbw_pin,0)
+    set_speed(lbw_pin,speed)
+
+#@move
+def left(speed):
+    '''rotate left'''
+    set_speed(rfw_pin,0)
+    set_speed(lfw_pin,speed)
+    set_speed(rbw_pin,speed)
+    set_speed(lbw_pin,0)
+
+#@move
+def forward(speed):
+    ''' all forward '''
+    set_speed(rfw_pin,speed)
+    set_speed(lfw_pin,speed)
+    set_speed(rbw_pin,0)
+    set_speed(lbw_pin,0)
+
+#@move
+def backward(speed):
+    ''' all backward '''
+    set_speed(rfw_pin,0)
+    set_speed(lfw_pin,0)
+    set_speed(rbw_pin,speed)
+    set_speed(lbw_pin,speed)
+
+def stop():
+    ''' all stop '''
+    for pin in motor_pins:
+        set_speed(pin,0)
+
+
+
+
+if __name__ == '__main__':
+    setup_GPIO()
+
+    forward(20)
+    wait(1)
+    stop()
+    
+    
+    
+    ''' tidy up '''
+    stop()
+    GPIO.cleanup()
