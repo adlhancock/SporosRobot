@@ -85,7 +85,7 @@ def stop():
 
 if __name__ == '__main__':
     setup_GPIO()
-    speed = int(input("speed: "))
+    speed = int(input('speed: '))
     direction = {'f':forward,
                  'b':backward,
                  'l':left,
