@@ -80,9 +80,6 @@ def stop():
     for pin in motor_pins:
         set_speed(pin,0)
 
-
-
-
 if __name__ == '__main__':
     setup_GPIO()
     speed = int(input('speed: '))
@@ -94,8 +91,8 @@ if __name__ == '__main__':
     while cmd is not '':
         cmd = input('direction+time: ')
         try: 
-            cmd = cmd.split(' ')
-            for i in cmd:
+            commands = cmd.split(' ')
+            for i in commands:
                 d = i[0]
                 t = float(i[1:])
                 direction[d](speed, t)
