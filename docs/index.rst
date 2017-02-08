@@ -12,7 +12,8 @@ This is a set of modules for controling a simple wheeled Raspberry Pi based robo
    :maxdepth: 2
    :caption: Contents:
 
-
+   about
+   code
 
 Indices and tables
 ==================
