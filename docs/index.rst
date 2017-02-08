@@ -6,7 +6,7 @@
 Welcome to SporosRobot's documentation!
 =======================================
 
-This is a set of modules for controling a simple wheeled Raspberry Pi based robot. This documentation exists mainly as a trial use of the `Sphinx http://www.sphinx-doc.org/>`_ documentation generation tool and `Readthedocs <https://readthedocs.org/>`_.
+This is a set of modules for controling a simple wheeled Raspberry Pi based robot. This documentation exists mainly as a trial use of the `Sphinx <http://www.sphinx-doc.org/>`_ documentation generation tool and `Readthedocs <https://readthedocs.org/>`_.
 
 .. toctree::
    :maxdepth: 2
