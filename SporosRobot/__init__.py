@@ -5,13 +5,7 @@
 
 __all__ =     ['initialise',
                'cleanup',
-               'fullspeed',
-               'right',
-               'left',
-               'forward',
-               'backward',
-               'stop',
-               'wait']
+               'fullspeed']
        
 # from time import sleep as wait
 # import RPi.GPIO as GPIO
@@ -19,10 +13,10 @@ __all__ =     ['initialise',
 
 # import fullspeed
 
-import variablespeed
+from .variablespeed import go
 
 from .system import initialise, cleanup
 
-from .fullspeed import left, right, forward, backward, stop
+# from .fullspeed import left, right, forward, backward, stop
 
 
