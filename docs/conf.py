@@ -32,7 +32,7 @@ class Mock(MagicMock):
                 return MagicMock()
 
 MOCK_MODULES = ['RPi']
-sys.modules.update((mod_name, Mock()) for mod_name in MOCK_modules)
+sys.modules.update((mod_name, Mock()) for mod_name in MOCK_MODULES)
 
 
 
