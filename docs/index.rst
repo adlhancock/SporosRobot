@@ -15,6 +15,7 @@ This is a set of modules for controling a simple wheeled Raspberry Pi based robo
    about
    system
    fullspeed
+   variablespeed
    code
 
 Indices and tables
