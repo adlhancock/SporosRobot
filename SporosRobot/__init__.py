@@ -17,9 +17,9 @@ from time import sleep as wait
 import RPi.GPIO as GPIO
 from RPi.GPIO import cleanup
 
-import .fullspeed
+# import fullspeed
 
-import .variablespeed
+import variablespeed
 
 from .system import initialise, cleanup
 
