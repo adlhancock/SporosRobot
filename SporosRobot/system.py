@@ -1,7 +1,6 @@
 #! /usr/bin/python3
 # -*- coding: utf-8 -*-
-"""
-Setup for Raspberry Pi Camjam EduKit Robotics hat
+""" Setup for Raspberry Pi Camjam EduKit Robotics hat
 
 Created: 2016-12-03
 
