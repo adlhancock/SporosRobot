@@ -13,6 +13,7 @@ This is a set of modules for controling a simple wheeled Raspberry Pi based robo
    :caption: Contents:
 
    about
+   fullspeed
    code
 
 Indices and tables
