@@ -1,26 +1,28 @@
 #! /usr/bin/python3
-"""
+""" SporosRobot: a set of tools for controlling a two wheeled raspberry pi robot
 
 """
 
-all = ['initialise',
-       'cleanup',
-       'fullspeed',
-       'right',
-       'left',
-       'forward',
-       'backward',
-       'stop',
-       'wait']
+__all__ =     ['initialise',
+               'cleanup',
+               'fullspeed',
+               'right',
+               'left',
+               'forward',
+               'backward',
+               'stop',
+               'wait']
        
 from time import sleep as wait
 import RPi.GPIO as GPIO
 from RPi.GPIO import cleanup
 
-import fullspeed
+import .fullspeed
 
-from SporosRobot.system import initialise, cleanup
+import .variablespeed
 
-# from fullspeed import left, right, forward, backward, stop
+from .system import initialise, cleanup
+
+from .fullspeed import left, right, forward, backward, stop
 
 
