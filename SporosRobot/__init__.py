@@ -13,9 +13,9 @@ __all__ =     ['initialise',
                'stop',
                'wait']
        
-from time import sleep as wait
-import RPi.GPIO as GPIO
-from RPi.GPIO import cleanup
+# from time import sleep as wait
+# import RPi.GPIO as GPIO
+# from RPi.GPIO import cleanup
 
 # import fullspeed
 
