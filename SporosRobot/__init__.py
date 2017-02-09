@@ -11,11 +11,13 @@ __all__ =     ['initialise',
 # import RPi.GPIO as GPIO
 # from RPi.GPIO import cleanup
 
-# import fullspeed
+import SporosRobot.fullspeed
+import SporosRobot.system
+import SporosRobot.variablespeed
+
 
 # from .variablespeed import go
 
-# from .system import initialise, cleanup
 
 # from .fullspeed import left, right, forward, backward, stop
 
