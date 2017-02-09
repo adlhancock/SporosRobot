@@ -26,6 +26,7 @@ def directions(pwm):
             pwm[pin].ChangeDutyCycle(duty)
     
     def move(func):
+        """ a function wrapper for the different directions """
         def function_wrapper(speed,t):
             assert 0<=speed<=100, 'speed must be between 0 and 100'
             print('moving {} at {}% for {} seconds'.format(func.__name__,speed,t))
@@ -72,6 +73,7 @@ def directions(pwm):
             set_speed(pin,0)
             
     def go():
+        """ an all in one command for stringing together movements"""
         direction = {'f':forward,
                      'b':backward,
                      'l':left,
