@@ -21,7 +21,7 @@ def setup_GPIO():
 def setup_pwm(motor_pins,frequency = 50):
     import RPi.GPIO as GPIO
     pwm = {}
-    for pin in motor_pins.values():
+    for pin in motor_pins:
         GPIO.setup(pin, GPIO.OUT)
         pwm[pin] = GPIO.PWM(pin, frequency)
         pwm[pin].start(0)

@@ -13,9 +13,9 @@ __all__ =     ['initialise',
 
 # import fullspeed
 
-from .variablespeed import go
+# from .variablespeed import go
 
-from .system import initialise, cleanup
+# from .system import initialise, cleanup
 
 # from .fullspeed import left, right, forward, backward, stop
 

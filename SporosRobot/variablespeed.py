@@ -13,7 +13,7 @@ from time import sleep as wait
 from SporosRobot.system import lfw,lbw,rfw,rbw,motor_pins,setup_GPIO,setup_pwm
 
 setup_GPIO()
-pwm = setup_pwm()
+pwm = setup_pwm(motor_pins)
 
 
 def directions(pwm):
