@@ -31,13 +31,13 @@ class setup:
         
         Parameters
         ----------
-        frequency
+        frequency: :class:`int`
             refresh rate
 
         Returns
         -------
-        :class:`dict` 
-            pwm, an object containing all the pins
+        pwm : :class:`dict`
+            an object containing all the pins
 
         """
 
@@ -50,7 +50,13 @@ class setup:
         return pwm, self.motor_pins
 
     def fullspeed(self):
-        """ Simple full power output on all motor pins """
+        """ Simple full power output on all motor pins 
+        
+        Returns
+        -------
+        motor_pins : :class:`dict'
+            a dictionary of named motor pins
+        """
         import RPi.GPIO as GPIO
         for pin in self.motor_pins.values():
             GPIO.setup(pin, GPIO.OUT)
