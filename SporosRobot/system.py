@@ -1,6 +1,6 @@
 #! /usr/bin/python3
 # -*- coding: utf-8 -*-
-""" Setup tools for :module:`SporosRobot`
+""" Setup tools for $project
 
 
 For setting up the Camjam EduKit Robotics hat
