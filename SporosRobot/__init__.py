@@ -3,22 +3,18 @@
 
 """
 
-__all__ =     ['initialise',
-               'cleanup',
-               'fullspeed']
+__all__ =     ['variablespeed',
+               'fullspeed',
+               'setup'
+               ]
        
-# from time import sleep as wait
-# import RPi.GPIO as GPIO
-# from RPi.GPIO import cleanup
-
-import SporosRobot.fullspeed
-import SporosRobot.system
-import SporosRobot.variablespeed
+#from time import sleep as wait
+#import RPi.GPIO as GPIO
+#from RPi.GPIO import cleanup
 
 
-# from .variablespeed import go
-
-
-# from .fullspeed import left, right, forward, backward, stop
+from .system import setup
+from .variablespeed import variablespeed
+from .fullspeed import fullspeed
 
 
