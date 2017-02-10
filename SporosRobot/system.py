@@ -54,7 +54,7 @@ class setup:
         
         Returns
         -------
-        motor_pins : :class:`dict'
+        motor_pins : :class:`dict`
             a dictionary of named motor pins
         """
         import RPi.GPIO as GPIO
