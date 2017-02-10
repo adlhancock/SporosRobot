@@ -1,6 +1,6 @@
 #! /usr/bin/python3
 # -*- coding: utf-8 -*-
-""" Setup tools for $project
+""" Setup tools for SporosRobot
 
 
 For setting up the Camjam EduKit Robotics hat
@@ -36,8 +36,8 @@ class setup:
 
         Returns
         -------
-        pwm 
-            :class:`dict` object containing all the pins
+        :class:`dict` 
+            pwm, an object containing all the pins
 
         """
 
