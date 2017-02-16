@@ -18,7 +18,7 @@ This is a set of modules for controling a simple wheeled Raspberry Pi based robo
 
 .. toctree::
    :maxdepth: 2
-   :caption: Documentation in the code
+   :caption: Documentation in the code:
 
     system
     fullspeed
