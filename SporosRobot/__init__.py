@@ -16,5 +16,6 @@ __all__ =     ['variablespeed',
 from .system import setup
 from .variablespeed import variablespeed
 from .fullspeed import fullspeed
+from .distance import get_distance
 
 
