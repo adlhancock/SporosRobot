@@ -3,4 +3,6 @@ Activate Bat Eyes
 
 SporosRobot has an ultrasonic detector
 
-.. :automodule:: distance
+.. :automodule:: SporosRobot.distance
+   :members:
+   :undoc-members:
