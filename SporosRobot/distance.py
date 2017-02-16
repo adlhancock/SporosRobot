@@ -12,6 +12,15 @@ pinTrigger = 17
 pinEcho = 18
 
 def setup_ears():
+    """ setup pins required for distance measurement
+    
+    Actions
+    ^^^^^^^
+    - sets mode as BCM
+    - set sets warnings off
+    - sets trigger and echo pins as output and input respectively
+
+    """
     GPIO.setmode(GPIO.BCM)
     GPIO.setwarnings(False)
     
