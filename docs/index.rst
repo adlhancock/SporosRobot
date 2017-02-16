@@ -15,13 +15,19 @@ This is a set of modules for controling a simple wheeled Raspberry Pi based robo
    :caption: Contents:
 
    about
-   system
-   fullspeed
-   variablespeed
-   code
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Documentation in the code
+
+    system
+    fullspeed
+    variablespeed
+    distance
+    all
 
 Indices and tables
-==================
+^^^^^^^^^^^^^^^^^^
 
 * :ref:`genindex`
 * :ref:`modindex`
