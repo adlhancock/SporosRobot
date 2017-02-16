@@ -18,6 +18,10 @@ class setup:
                            'lbw':8,
                            'rfw':9,
                            'rbw':10}
+        
+        self.ultrasound_pins = {'trigger':17,
+                                'echo':18}
+
 
     def GPIO(self):
         """ initialise pins"""
@@ -26,7 +30,7 @@ class setup:
         GPIO.setwarnings(False)
         return
                
-    def pwm(self,frequency = 50):
+    def pwm(self,frequency = 20):
         """ Setup pulse width modulation
         
         Parameters
