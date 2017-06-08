@@ -11,6 +11,9 @@ sys.path.append('/home/pi/python/SporosRobot/')
 
 import SporosRobot
 
-SporosRobot.distance()
-setup_ears()
-get_distance()
+SporosRobot.distance.setup_ears()
+
+while true:
+    d = SporosRobot.distance.get_distance()
+    print("{:3.2f} cm".format(d))
+
