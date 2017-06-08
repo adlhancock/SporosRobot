@@ -28,7 +28,7 @@ def setup_ears():
     GPIO.setup(pinEcho, GPIO.IN)
 
 
-def get_distance():
+def get_distance(verbose=False):
     """ Gets distance once using ultrasonic pulse
 
     Parameters:
@@ -56,6 +56,7 @@ def get_distance():
         StopTime = time.time()
 
         if StopTime - StartTime >= 0.04:
+            distance = "Too Close!!!"
             print("Too close!!!")
             StopTime = StartTime
             break
@@ -64,7 +65,7 @@ def get_distance():
 
     distance = (ElapsedTime * 34326)/2
 
-    print('{:2.1f} cm'.format(distance))
+    if verbose is True: print('{:2.1f} cm'.format(distance))
     #dots = int(distance/2)
     #print('.'*dots)
 
@@ -78,6 +79,8 @@ if __name__ == "__main__":
 
         while True:
             d = get_distance()
+            print("{:3.2f} cm".format(d))
+
             time.sleep(0.1)
 
     except KeyboardInterrupt:
