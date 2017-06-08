@@ -78,6 +78,7 @@ def report_distance():
     except KeyboardInterrupt:
         GPIO.cleanup()
         print("\n\nclean exit")
+    return d
 
 if __name__ == "__main__":
     try: report_distance()
