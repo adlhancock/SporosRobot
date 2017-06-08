@@ -13,6 +13,10 @@ class variablespeed:
         setup.GPIO()
         self.pwm, self.motor_pins = setup.pwm()
 
+    pwm = self.pwm
+    p = self.motor_pins
+    rfw, rbw, lfw, lbw = (p[key] for key in ('rfw', 'rbw', 'lfw','lbw'))
+    
     def stop(self):
         import RPi.GPIO as GPIO
         GPIO.cleanup()

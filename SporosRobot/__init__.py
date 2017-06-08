@@ -5,7 +5,8 @@
 
 __all__ =     ['variablespeed',
                'fullspeed',
-               'setup'
+               'setup',
+               'distance'
                ]
        
 #from time import sleep as wait
@@ -16,6 +17,6 @@ __all__ =     ['variablespeed',
 from .system import setup
 from .variablespeed import variablespeed
 from .fullspeed import fullspeed
-from .distance import get_distance
+from .distance import get_distance, report_distance
 
 
