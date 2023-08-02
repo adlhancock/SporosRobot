@@ -7,7 +7,7 @@
 import os
 import sys
 
-sys.path.append('/home/pi/python/SporosRobot/')
+sys.path.insert(0,os.path.abspath('..'))
 
 import SporosRobot
 

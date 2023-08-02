@@ -5,7 +5,7 @@ Created on Sat Dec  3 21:15:01 2016
 
 @author: David
 """
-
+from .context import SporosRobot
 from SporosRobot import initialise, cleanup
 
 def drive():
