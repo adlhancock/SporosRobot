@@ -92,7 +92,7 @@ class variablespeed:
         # as long as it isn't an empty string
         cmd_string = 'go'
 
-        while cmd_string is not '':
+        while cmd_string != '':
             cmd_string = input('direction+time: ')
             try: 
                 commands = cmd_string.split(' ')
